@@ -9,7 +9,19 @@ const Footer: React.FC = () => {
             
             {/* Brand */}
             <div className="max-w-xs">
-                <h2 className="font-logo text-2xl tracking-[0.2em] text-white mb-6">LUMINA</h2>
+                {/* Logo Image: Inverted for dark mode compatibility (Black logo becomes White) */}
+                <img 
+                  src="/logo.png" 
+                  alt="LUMINA" 
+                  className="h-10 w-auto mb-6 brightness-0 invert"
+                  onError={(e) => {
+                     e.currentTarget.style.display = 'none';
+                     e.currentTarget.nextElementSibling?.classList.remove('hidden');
+                  }}
+                />
+                {/* Fallback */}
+                <h2 className="hidden font-logo text-2xl tracking-[0.2em] text-white mb-6">LUMINA</h2>
+                
                 <p className="font-sans text-sm leading-relaxed text-stone-400">
                     Guiding you from first impressions to lasting impact. Elevate your presence with world-class coaching.
                 </p>

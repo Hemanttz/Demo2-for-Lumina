@@ -31,12 +31,24 @@ const Header: React.FC = () => {
     >
       <div className="container mx-auto px-6 flex justify-between items-center">
         {/* Logo Container */}
-        <div className="flex flex-col group cursor-pointer" onClick={() => window.scrollTo(0,0)}>
-          <div className={`font-logo text-3xl md:text-4xl tracking-[0.2em] transition-colors duration-500 leading-none text-stone-800`}>
+        <div className="flex items-center cursor-pointer" onClick={() => window.scrollTo(0,0)}>
+          {/* 
+            NOTE: Ensure you have a 'logo.png' file in your public folder.
+            If your logo is black text, this works on light backgrounds.
+          */}
+          <img 
+            src="/logo.png" 
+            alt="LUMINA" 
+            className="h-10 md:h-12 w-auto object-contain transition-transform duration-300 hover:scale-105"
+            onError={(e) => {
+              // Fallback if image fails to load
+              e.currentTarget.style.display = 'none';
+              e.currentTarget.nextElementSibling?.classList.remove('hidden');
+            }}
+          />
+          {/* Fallback Text in case image is missing */}
+          <div className="hidden font-logo text-3xl md:text-4xl tracking-[0.2em] text-stone-800">
             LUMINA
-          </div>
-          <div className={`text-[0.6rem] md:text-[0.7rem] tracking-[0.35em] font-display font-medium uppercase mt-2 pl-1 transition-colors duration-500 text-stone-600`}>
-            Presence. Poise. Power.
           </div>
         </div>
 
