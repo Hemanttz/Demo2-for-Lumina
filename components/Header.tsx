@@ -35,7 +35,7 @@ const Header: React.FC = () => {
           <div className={`font-logo text-3xl md:text-4xl tracking-[0.2em] transition-colors duration-500 leading-none text-stone-800`}>
             LUMINA
           </div>
-          <div className={`text-[0.6rem] md:text-[0.7rem] tracking-[0.35em] font-sans font-medium uppercase mt-2 pl-1 transition-colors duration-500 text-stone-600`}>
+          <div className={`text-[0.6rem] md:text-[0.7rem] tracking-[0.35em] font-display font-medium uppercase mt-2 pl-1 transition-colors duration-500 text-stone-600`}>
             Presence. Poise. Power.
           </div>
         </div>
@@ -46,7 +46,7 @@ const Header: React.FC = () => {
             <a 
               key={item.label} 
               href={item.href}
-              className={`text-xs uppercase tracking-widest font-bold transition-colors duration-300 text-stone-800 hover:text-stone-500`}
+              className={`text-xs uppercase tracking-widest font-display font-semibold transition-colors duration-300 text-stone-800 hover:text-stone-500`}
             >
               {item.label}
             </a>
@@ -70,7 +70,7 @@ const Header: React.FC = () => {
               key={item.label} 
               href={item.href}
               onClick={() => setIsMobileMenuOpen(false)}
-              className="text-sm uppercase tracking-widest font-bold text-stone-800"
+              className="text-sm uppercase tracking-widest font-display font-bold text-stone-800"
             >
               {item.label}
             </a>

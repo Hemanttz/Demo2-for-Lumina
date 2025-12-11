@@ -22,7 +22,7 @@ const Hero: React.FC = () => {
           Your Partner in Professional and Personal Growth
         </h2>
         <h1 className="font-display text-3xl md:text-5xl lg:text-6xl text-stone-900 tracking-[0.05em] font-bold mb-10 drop-shadow-sm leading-tight opacity-0 animate-fade-in-up delay-200">
-          Cultivate a Life of<br/>Grace and Purpose
+          CULTIVATE A LIFE OF<br/>GRACE AND PURPOSE
         </h1>
         <div className="flex justify-center gap-4 opacity-0 animate-fade-in-up delay-500">
             <Button variant="primary">

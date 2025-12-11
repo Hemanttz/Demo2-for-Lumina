@@ -45,10 +45,13 @@ const Offerings: React.FC = () => {
     <section id="offerings" className="py-24 bg-white">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
-          <h2 className="font-serif italic text-4xl text-stone-800 mb-4">Our Offerings</h2>
-          <p className="font-sans text-stone-500 max-w-2xl mx-auto">
-            From first impressions to lasting impact — LUMINA's offerings sculpt the finest version of you.
-          </p>
+            <span className="font-display text-xs tracking-[0.2em] text-stone-500 uppercase font-semibold">
+                Curated Experiences
+            </span>
+            <h2 className="font-serif text-4xl md:text-5xl text-stone-800 mt-3 mb-4">Our Offerings</h2>
+            <p className="font-sans text-stone-500 max-w-2xl mx-auto">
+                From first impressions to lasting impact — LUMINA's offerings sculpt the finest version of you.
+            </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -62,10 +65,10 @@ const Offerings: React.FC = () => {
                 />
                 <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-500"></div>
               </div>
-              <h3 className="font-serif text-xl text-stone-800 text-center mb-2 group-hover:text-stone-600 transition-colors">
+              <h3 className="font-serif text-2xl text-stone-800 text-center mb-2 group-hover:text-stone-600 transition-colors">
                 {item.title}
               </h3>
-              <p className="font-sans text-sm text-stone-400 text-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <p className="font-sans text-sm text-stone-500 text-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                 {item.description}
               </p>
             </div>
